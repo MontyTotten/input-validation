@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create a recipe!</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style type="text/css"></style>
+</head>
+<body>
+    <main>
+        <h1>Create a recipe</h1>
+        <form method="POST" action="http://requestb.in/1kdeff71">
+            <div class="step is-active">
+                <h2>Let's start by giving your recipe a name and a brief description.</h2>
+                <fieldset>
+                    <!-- This field is required and should be at minimum 3 characters and at maximum 50 characters. -->
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name">
+                    </div>
+                    <!-- This field is required and should be at minimum 20 characters and at maximum 255 characters. -->
+                    <div class="field">
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description"></textarea>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="step">
+                <h2>How long will your recipe take to complete?</h2>
+                <fieldset>
+                    <!-- This field is required. -->
+                    <div class="field">
+                        <label for="hours">Hours</label>
+                        <input type="number" id="hours" name="hours">
+                    </div>
+                    <!-- This field is not required. -->
+                    <div class="field">
+                        <label for="minutes">Minutes</label>
+                        <input type="number" id="minutes" name="minutes">
+                    </div>
+                </fieldset>
+                <h2>What skill level does your recipe require?</h2>
+                <fieldset>
+                    <!-- This field is required. -->
+                    <div class="field">
+                        <label for="skill">Skill level</label>
+                        <select id="skill">
+                            <option></option>
+                            <option>Beginner</option>
+                            <option>Intermediate</option>
+                            <option>Advanced</option>
+                        </select>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="step">
+                <h2>Ingredients</h2>
+                <p>Add ingredients using the textarea below.</p>
+                <fieldset>
+                    <!-- This field is required and should be at maximum 255 characters. -->
+                    <div class="field">
+                        <label for="ingredients">Ingredients</label>
+                        <textarea id="ingredients" name="ingredients"></textarea>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="step">
+                <h2>Steps</h2>
+                <p>Add steps using the textarea below.</p>
+                <fieldset>
+                    <!-- This field is required and should be at maximum 255 characters. -->
+                    <div class="field">
+                        <label for="steps">Steps</label>
+                        <textarea id="steps" name="steps"></textarea>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="step">
+                <h2>Submit</h2>
+                <p>If you are done with your submission, press the button labeled "Submit" below.</p>
+                <fieldset>
+                    <div class="field">
+                        <input type="submit" value="Submit">
+                    </div>
+                </fieldset>
+            </div>
+            <button id="back">Back</button>
+            <button id="next">Next</button>
+        </form>
+    </main>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>

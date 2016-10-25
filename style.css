@@ -1,0 +1,146 @@
+/* Base */
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fafafa;
+    color: #333;
+    font-family: Helvetica;
+    margin: 0;
+}
+
+main {
+    margin: 0 auto;
+    padding: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 200;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+@media (min-width: 600px) {
+    main {
+        padding: 0;
+        width: 80vw;
+        max-width: 1000px;
+    }
+}
+
+/* Form */
+label {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+fieldset {
+    margin: 2em 0;
+    border: 0;
+}
+
+button,
+input,
+textarea {
+    background-color: #fdfdfd;
+    border: 1px solid #ccc;
+    padding: 1em;
+}
+
+button:focus,
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+button:hover,
+input:hover,
+textarea:hover,
+button:focus,
+input:focus,
+textarea:focus {
+    background-color: #fff !important; /* fix for autofill */
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+input:not([type="submit"]):not([type="button"]),
+textarea {
+    width: 100%;
+    display: block;
+}
+
+input[type="text"],
+textarea {
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 100px;
+}
+
+#back,
+#next {
+    display: none;
+}
+
+#back.is-active,
+#next.is-active {
+    display: initial;
+}
+
+/* Step */
+.step {
+    display: none;
+    margin: 1em 0;
+}
+
+.step.is-active {
+    display: block;
+}
+
+.step:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+/* Field */
+.field {
+    padding: 1em;
+}
+
+.field.is-error > input,
+.field.is-error > textarea {
+    border-color: red;
+}
+
+.field.is-error:after {
+    background-color: #f00;
+    content: attr(data-error);
+    color: #fff;
+    display: block;
+    font-size: 0.65em;
+    padding: 4px;
+    text-transform: uppercase;
+}
+
+@media (min-width: 600px) {
+    .field {
+        float: left;
+        width: 50%;
+    }
+}
